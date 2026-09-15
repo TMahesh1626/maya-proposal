@@ -1,0 +1,455 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #0d0610;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ---------------- HERO SECTION ---------------- */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at top, #5c123d, #1b0719 45%, #08030a);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    animation: fadeIn 2s ease;
+}
+
+.small-text {
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: #f4b6ca;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 10vw, 110px);
+    margin-bottom: 20px;
+    font-weight: normal;
+    text-shadow: 0 0 30px rgba(255, 100, 160, 0.5);
+}
+
+.intro {
+    font-size: 24px;
+    color: #f8dce7;
+    margin-bottom: 40px;
+}
+
+
+/* ---------------- BUTTONS ---------------- */
+
+button {
+    border: none;
+    cursor: pointer;
+    font-family: Georgia, "Times New Roman", serif;
+    transition: 0.3s ease;
+}
+
+.hero button,
+.story button,
+.message button {
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 17px;
+    background: #ffffff;
+    color: #6e1647;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hero button:hover,
+.story button:hover,
+.message button:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(255, 150, 190, 0.3);
+}
+
+
+/* ---------------- FLOATING HEARTS ---------------- */
+
+.hearts span {
+    position: absolute;
+    bottom: -50px;
+    font-size: 30px;
+    animation: floatHeart 8s linear infinite;
+    opacity: 0.7;
+}
+
+.hearts span:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.hearts span:nth-child(2) {
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.hearts span:nth-child(3) {
+    left: 55%;
+    animation-delay: 4s;
+}
+
+.hearts span:nth-child(4) {
+    left: 75%;
+    animation-delay: 1s;
+}
+
+.hearts span:nth-child(5) {
+    left: 90%;
+    animation-delay: 3s;
+}
+
+
+/* ---------------- STORY SECTION ---------------- */
+
+.story {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 50px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #210a1e,
+            #3b102d,
+            #170914
+        );
+}
+
+.story h2 {
+    font-size: clamp(35px, 6vw, 65px);
+    font-weight: normal;
+    margin-bottom: 35px;
+}
+
+.story p {
+    max-width: 700px;
+    font-size: 21px;
+    line-height: 1.9;
+    color: #f5dbe5;
+    margin-bottom: 20px;
+}
+
+.story button {
+    margin-top: 25px;
+}
+
+
+/* ---------------- MESSAGE SECTION ---------------- */
+
+.message {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+
+    background:
+        radial-gradient(circle, #4b1837, #160812);
+}
+
+.letter {
+    width: min(800px, 95%);
+    padding: 55px 45px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.4);
+
+    text-align: center;
+}
+
+.letter h2 {
+    font-size: 45px;
+    font-weight: normal;
+    margin-bottom: 35px;
+}
+
+.letter p {
+    font-size: 20px;
+    line-height: 1.9;
+    color: #f6dce7;
+    margin-bottom: 22px;
+}
+
+.letter button {
+    margin-top: 25px;
+}
+
+
+/* ---------------- PROPOSAL SECTION ---------------- */
+
+.proposal {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #6e1749,
+            #260a20 50%,
+            #09030a
+        );
+}
+
+.proposal-content {
+    max-width: 800px;
+}
+
+.ring {
+    font-size: 90px;
+    margin-bottom: 20px;
+
+    animation: ringFloat 2s ease-in-out infinite;
+}
+
+.proposal h1 {
+    font-size: clamp(55px, 10vw, 100px);
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.proposal h2 {
+    font-size: clamp(30px, 5vw, 55px);
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.proposal p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #f6dce7;
+
+    max-width: 650px;
+    margin: 0 auto 40px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.yes-btn {
+    padding: 18px 45px;
+
+    border-radius: 50px;
+
+    background: #ffffff;
+    color: #8a1655;
+
+    font-size: 22px;
+
+    box-shadow:
+        0 10px 40px rgba(255, 255, 255, 0.15);
+}
+
+.yes-btn:hover {
+    transform: scale(1.1);
+}
+
+.think-btn {
+    padding: 18px 30px;
+
+    border-radius: 50px;
+
+    background: transparent;
+
+    color: white;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    font-size: 17px;
+}
+
+.think-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+/* ---------------- FINAL SECTION ---------------- */
+
+.final {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background:
+        radial-gradient(circle, #73194d, #210817);
+}
+
+.final-content {
+    max-width: 800px;
+}
+
+.big-heart {
+    font-size: 110px;
+
+    animation:
+        heartbeat 1.2s infinite;
+}
+
+.final h1 {
+    font-size: clamp(35px, 6vw, 65px);
+    font-weight: normal;
+    margin: 30px 0;
+}
+
+.final p {
+    font-size: 21px;
+    line-height: 1.8;
+    color: #f8dce7;
+}
+
+.final h2 {
+    margin-top: 40px;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+
+/* ---------------- ANIMATIONS ---------------- */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes floatHeart {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+
+}
+
+@keyframes ringFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+@keyframes heartbeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+}
+
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .intro {
+        font-size: 19px;
+    }
+
+    .story p,
+    .letter p,
+    .proposal p,
+    .final p {
+        font-size: 17px;
+    }
+
+    .letter {
+        padding: 40px 25px;
+    }
+
+    .letter h2 {
+        font-size: 35px;
+    }
+
+    .ring {
+        font-size: 70px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
