@@ -453,3 +453,71 @@ button {
     }
 
 }
+/* Audio Message Section */
+
+.audio-section {
+    text-align: center;
+    padding: 80px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.audio-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.audio-section > p {
+    max-width: 600px;
+    line-height: 1.8;
+}
+
+.audio-card {
+    width: min(90%, 550px);
+    margin: 35px auto;
+    padding: 35px 25px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.audio-icon {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    animation: heartbeat 1.8s infinite;
+}
+
+.audio-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.audio-card p {
+    margin-bottom: 20px;
+}
+
+.audio-card audio {
+    width: 100%;
+    max-width: 450px;
+}
+
+@media (max-width: 600px) {
+
+    .audio-section {
+        padding: 60px 15px;
+    }
+
+    .audio-section h2 {
+        font-size: 2rem;
+    }
+
+    .audio-card {
+        padding: 30px 15px;
+    }
+
+}

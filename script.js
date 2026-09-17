@@ -7,6 +7,13 @@ function startJourney() {
 
 }
 
+//Show the Audio
+function showAudio() {
+    document.getElementById("audio").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
 
 // Show the personal message
 function showMessage() {
