@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>For Maya ❤️</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <!-- Opening Section -->
-    <section class="hero">
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
 
-        <div class="hearts">
-            <span>❤️</span>
-            <span>💕</span>
-            <span>💗</span>
-            <span>💖</span>
-            <span>❤️</span>
+        <div class="floating-hearts">
+            ❤️
+            💕
+            💗
+            💖
+            ❤️
         </div>
 
-        <div class="hero-content">
+        <p class="small-text">
+            A little something from my heart...
+        </p>
 
-            <p class="small-text">
-                A little something from my heart...
-            </p>
+        <h1>
+            Hey Maya ❤️
+        </h1>
 
-            <h1>
-                Hey Maya ❤️
-            </h1>
+        <p>
+            I made something special for you.
+        </p>
 
-            <p class="intro">
-                I made something special for you.
-            </p>
-
-            <button onclick="startJourney()">
-                Open My Heart 💌
-            </button>
-
-        </div>
+        <button onclick="startJourney()">
+            Open My Heart 💌
+        </button>
 
     </section>
 
@@ -48,20 +47,89 @@
     <!-- Our Story Section -->
     <section id="story" class="story">
 
-        <h2>Before I Tell You Something...</h2>
+        <p class="small-text">
+            A little piece of our story...
+        </p>
+
+        <h2>It All Started With You ❤️</h2>
 
         <p>
-            There are some people who enter our lives
-            and slowly become a beautiful part of our story.
+            We met at a college event.
         </p>
 
         <p>
-            And somehow...
-            you became that person for me. ❤️
+            At that time, I didn't know how important
+            you would become in my life.
         </p>
+
+        <p>
+            But slowly, you became someone
+            very special to me.
+        </p>
+
+        <p>
+            And one memory that will always stay
+            close to my heart...
+        </p>
+
+        <div class="memory-card">
+
+            <div class="memory-icon">
+                🤗
+            </div>
+
+            <h3>The First Hug</h3>
+
+            <p>
+                The first time I hugged you...
+                that's one of my favourite memories with you.
+                ❤️
+            </p>
+
+        </div>
+
+        <button onclick="showAudio()">
+            Continue Our Story ✨
+        </button>
+
+    </section>
+
+
+    <!-- Audio Message Section -->
+    <section id="audio" class="audio-section">
+
+        <p class="small-text">
+            There’s something I want you to hear... ❤️
+        </p>
+
+        <h2>Listen to My Heart 🎧</h2>
+
+        <p>
+            Some feelings are difficult to put into words...
+            so I decided to let my voice say them.
+        </p>
+
+        <div class="audio-card">
+
+            <div class="audio-icon">
+                🎧
+            </div>
+
+            <h3>A Message For You, Maya ❤️</h3>
+
+            <p>
+                Press play when you're ready...
+            </p>
+
+            <audio controls>
+                <source src="my-message.mp3" type="audio/mpeg">
+                Your browser does not support audio.
+            </audio>
+
+        </div>
 
         <button onclick="showMessage()">
-            Continue ✨
+            Continue ❤️
         </button>
 
     </section>
@@ -70,35 +138,34 @@
     <!-- Message Section -->
     <section id="message" class="message">
 
-        <div class="letter">
+        <p class="small-text">
+            And now... something from my heart ❤️
+        </p>
 
-            <h2>Dear Maya ❤️</h2>
+        <h2>Dear Maya ❤️</h2>
 
-            <p>
-                I don't know exactly when it happened...
-            </p>
+        <p>
+            There are some people who slowly become
+            an important part of your life.
+        </p>
 
-            <p>
-                But somewhere between our conversations,
-                our little moments, and everything we've shared,
-                you became someone very special to me.
-            </p>
+        <p>
+            You became that person for me.
+        </p>
 
-            <p>
-                I don't want just a beautiful moment with you.
-                I want to create a beautiful life with you.
-            </p>
+        <p>
+            I don't know exactly what the future holds,
+            but I know that I want you to be a part of it.
+        </p>
 
-            <p>
-                And today, I want to ask you something
-                that comes straight from my heart...
-            </p>
+        <p>
+            And there's one question I've been wanting
+            to ask you...
+        </p>
 
-            <button onclick="showProposal()">
-                One Last Thing... 💍
-            </button>
-
-        </div>
+        <button onclick="showProposal()">
+            One Last Thing... 💍
+        </button>
 
     </section>
 
@@ -106,36 +173,41 @@
     <!-- Proposal Section -->
     <section id="proposal" class="proposal">
 
-        <div class="proposal-content">
+        <div class="ring">
+            💍
+        </div>
 
-            <div class="ring">
-                💍
-            </div>
+        <p class="small-text">
+            Maya...
+        </p>
 
-            <h1>
-                Maya...
-            </h1>
+        <h2>
+            Will You Be My Forever? ❤️
+        </h2>
 
-            <h2>
-                Will you be my forever? ❤️
-            </h2>
+        <p>
+            I don't promise that every day will be perfect.
+            But I promise that I'll always try to make
+            every day worth remembering.
+        </p>
 
-            <p>
-                I want to make countless memories with you,
-                stand beside you, and choose you every day.
-            </p>
+        <p>
+            So, Navya Sai...
+        </p>
 
-            <div class="buttons">
+        <h2>
+            Will you choose me? ❤️
+        </h2>
 
-                <button class="yes-btn" onclick="sayYes()">
-                    YES ❤️
-                </button>
+        <div class="proposal-buttons">
 
-                <button class="think-btn" onclick="thinkAboutIt()">
-                    Let me think... 🙈
-                </button>
+            <button onclick="sayYes()">
+                YES ❤️
+            </button>
 
-            </div>
+            <button onclick="thinkAboutIt()">
+                Let Me Think... 🙈
+            </button>
 
         </div>
 
@@ -145,27 +217,30 @@
     <!-- Final Section -->
     <section id="final" class="final">
 
-        <div class="final-content">
-
-            <div class="big-heart">
-                ❤️
-            </div>
-
-            <h1>
-                You just made my heart the happiest. ❤️
-            </h1>
-
-            <p>
-                Whatever the future brings,
-                I'm grateful that you're a part of my story.
-            </p>
-
-            <h2>
-                With all my heart,<br>
-                Mahi ❤️
-            </h2>
-
+        <div class="ring">
+            💖
         </div>
+
+        <h2>
+            You Just Made My Heart The Happiest. ❤️
+        </h2>
+
+        <p>
+            Whatever happens, I wanted you to know
+            how special you are to me.
+        </p>
+
+        <p>
+            Thank you for being you.
+        </p>
+
+        <p>
+            With all my heart,
+        </p>
+
+        <h3>
+            Mahi ❤️
+        </h3>
 
     </section>
 
@@ -173,4 +248,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>
