@@ -20,6 +20,7 @@ body {
 .hero {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -65,6 +66,7 @@ button {
     cursor: pointer;
     font-family: Georgia, "Times New Roman", serif;
     transition: 0.3s ease;
+    white-space: normal;
 }
 
 .hero button,
@@ -150,11 +152,13 @@ button {
 }
 
 .story p {
+    width: 100%;
     max-width: 700px;
     font-size: 21px;
     line-height: 1.9;
     color: #f5dbe5;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
+    overflow-wrap: break-word;
 }
 
 .story button {
@@ -162,13 +166,107 @@ button {
 }
 
 
+/* ---------------- AUDIO SECTION ---------------- */
+
+.audio-section {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background:
+        radial-gradient(circle at center, #48142f, #180812);
+}
+
+.audio-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.audio-section > p {
+    width: 100%;
+    max-width: 600px;
+    line-height: 1.8;
+    margin: 0 auto 15px;
+    overflow-wrap: break-word;
+}
+
+.audio-card {
+    width: min(90%, 550px);
+    margin: 35px auto;
+    padding: 35px 25px;
+
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+
+    text-align: center;
+}
+
+.audio-icon {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    animation: heartbeat 1.8s infinite;
+}
+
+.audio-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.audio-card p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.audio-card audio {
+    width: 100%;
+    max-width: 450px;
+}
+
+.audio-section button {
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 17px;
+
+    background: #ffffff;
+    color: #6e1647;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.audio-section button:hover {
+    transform: translateY(-4px) scale(1.03);
+}
+
+
 /* ---------------- MESSAGE SECTION ---------------- */
 
 .message {
     min-height: 100vh;
+
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    text-align: center;
 
     padding: 50px 20px;
 
@@ -176,38 +274,21 @@ button {
         radial-gradient(circle, #4b1837, #160812);
 }
 
-.letter {
-    width: min(800px, 95%);
-    padding: 55px 45px;
-
-    background: rgba(255, 255, 255, 0.08);
-
-    border: 1px solid rgba(255, 255, 255, 0.15);
-
-    border-radius: 25px;
-
-    backdrop-filter: blur(10px);
-
-    box-shadow:
-        0 30px 80px rgba(0, 0, 0, 0.4);
-
-    text-align: center;
+.message > p {
+    width: 100%;
+    max-width: 650px;
+    line-height: 1.9;
+    margin: 0 auto 20px;
+    overflow-wrap: break-word;
 }
 
-.letter h2 {
+.message h2 {
     font-size: 45px;
     font-weight: normal;
     margin-bottom: 35px;
 }
 
-.letter p {
-    font-size: 20px;
-    line-height: 1.9;
-    color: #f6dce7;
-    margin-bottom: 22px;
-}
-
-.letter button {
+.message button {
     margin-top: 25px;
 }
 
@@ -218,6 +299,7 @@ button {
     min-height: 100vh;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -258,54 +340,51 @@ button {
 }
 
 .proposal p {
+    width: 100%;
+    max-width: 650px;
+
     font-size: 20px;
     line-height: 1.8;
     color: #f6dce7;
 
-    max-width: 650px;
     margin: 0 auto 40px;
+
+    overflow-wrap: break-word;
 }
 
-.buttons {
+.proposal-buttons {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-.yes-btn {
-    padding: 18px 45px;
-
+.proposal-buttons button {
+    padding: 18px 35px;
     border-radius: 50px;
+    font-size: 20px;
+}
 
+.proposal-buttons button:first-child {
     background: #ffffff;
     color: #8a1655;
-
-    font-size: 22px;
 
     box-shadow:
         0 10px 40px rgba(255, 255, 255, 0.15);
 }
 
-.yes-btn:hover {
+.proposal-buttons button:first-child:hover {
     transform: scale(1.1);
 }
 
-.think-btn {
-    padding: 18px 30px;
-
-    border-radius: 50px;
-
+.proposal-buttons button:last-child {
     background: transparent;
-
     color: white;
 
     border: 1px solid rgba(255, 255, 255, 0.4);
-
-    font-size: 17px;
 }
 
-.think-btn:hover {
+.proposal-buttons button:last-child:hover {
     background: rgba(255, 255, 255, 0.1);
 }
 
@@ -316,6 +395,7 @@ button {
     min-height: 100vh;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -331,7 +411,7 @@ button {
     max-width: 800px;
 }
 
-.big-heart {
+.final .ring {
     font-size: 110px;
 
     animation:
@@ -345,9 +425,16 @@ button {
 }
 
 .final p {
+    width: 100%;
+    max-width: 650px;
+
     font-size: 21px;
     line-height: 1.8;
     color: #f8dce7;
+
+    margin: 0 auto 20px;
+
+    overflow-wrap: break-word;
 }
 
 .final h2 {
@@ -420,96 +507,48 @@ button {
 
 @media (max-width: 600px) {
 
+    .hero {
+        padding: 30px 20px;
+    }
+
     .hero h1 {
         font-size: 60px;
+    }
+
+    .small-text {
+        font-size: 15px;
+        letter-spacing: 2px;
     }
 
     .intro {
         font-size: 19px;
     }
 
+    .story,
+    .audio-section,
+    .message,
+    .proposal,
+    .final {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     .story p,
-    .letter p,
+    .message > p,
     .proposal p,
     .final p {
+        width: 100%;
+        max-width: 350px;
         font-size: 17px;
+        line-height: 1.7;
     }
 
-    .letter {
-        padding: 40px 25px;
-    }
-
-    .letter h2 {
+    .story h2 {
         font-size: 35px;
     }
 
-    .ring {
-        font-size: 70px;
-    }
-
-    .buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-}
-/* Audio Message Section */
-
-.audio-section {
-    text-align: center;
-    padding: 80px 20px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.audio-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.audio-section > p {
-    max-width: 600px;
-    line-height: 1.8;
-}
-
-.audio-card {
-    width: min(90%, 550px);
-    margin: 35px auto;
-    padding: 35px 25px;
-    border-radius: 25px;
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
-}
-
-.audio-icon {
-    font-size: 4rem;
-    margin-bottom: 15px;
-    animation: heartbeat 1.8s infinite;
-}
-
-.audio-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.audio-card p {
-    margin-bottom: 20px;
-}
-
-.audio-card audio {
-    width: 100%;
-    max-width: 450px;
-}
-
-@media (max-width: 600px) {
-
-    .audio-section {
-        padding: 60px 15px;
+    .message h2 {
+        font-size: 35px;
     }
 
     .audio-section h2 {
@@ -517,27 +556,46 @@ button {
     }
 
     .audio-card {
+        width: 100%;
         padding: 30px 15px;
     }
 
-}
-/* Fix text wrapping on mobile */
+    .audio-card h3 {
+        font-size: 1.3rem;
+    }
 
-p,
-h1,
-h2,
-h3 {
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-}
+    .proposal h2 {
+        font-size: 30px;
+    }
 
-section {
-    overflow-x: hidden;
-}
+    .proposal p {
+        font-size: 17px;
+    }
 
-button {
-    white-space: normal;
+    .proposal-buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .proposal-buttons button {
+        width: min(90%, 280px);
+    }
+
+    .ring {
+        font-size: 70px;
+    }
+
+    .final .ring {
+        font-size: 90px;
+    }
+
+    .final h1 {
+        font-size: 35px;
+    }
+
+    .final h2 {
+        font-size: 28px;
+    }
+
 }
